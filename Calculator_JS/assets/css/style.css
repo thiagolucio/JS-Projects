@@ -111,20 +111,12 @@ input:focus {
 
 .btn-clear {
   background-color: #ff9a7b;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.btn-dividir {
+.btn-operators {
   background-color: #a5a496;
-}
-.btn-multiplica {
-  background-color: #a5a496;
-}
-.btn-soma {
-  background-color: #a5a496;
-}
-.btn-diminui {
-  background-color: #a5a496;
-}
-.btn-igual {
-  background-color: #a5a496;
+  font-weight: bold;
+  font-size: 20px;
 }
