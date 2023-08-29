@@ -1,13 +1,13 @@
 # Repositório que contém alguns pequenos projetos desenvolvidos em JS.
-# Repository that contains some small projects developed in JS.
 
+> Você perceberá a ocorrência de variáveis com nomes na língua portuguesa. Por favor. Desconsidere esse fato pois o mesmo foi feito com o intuito de treinar e passar o tempo e desta forma não ocorreu nenhum tipo de preocupação com padrões de projeto ou convenções. 
 
-## 🔗 PROJETOS/ PROJECTS
+## 🔗 PROJETOS
 
-[TASK LIST IN JS](https://github.com/thiagolucio/JS-Projects/tree/main/TaskList_JS):  A simple TaskList using Vanilla JS, CSS3 and HTML. 
+[TASK LIST IN JS](https://github.com/thiagolucio/JS-Projects/tree/main/TaskList_JS):  Listagem de Tarefas em JavaScript. 
 
-[FORM IN JS](https://github.com/thiagolucio/JS-Projects/tree/main/Form_JS): A simple Form using Vanilla JS, CSS3 and HTML. 
+[FORM IN JS](https://github.com/thiagolucio/JS-Projects/tree/main/Form_JS): Formulário usando Vanilla JS, CSS3 e HTML. 
 
-[CLOCK IN JS](https://github.com/thiagolucio/JS-Projects/tree/main/Clock_JS): A simple Clock using Vanilla JS, CSS3 and HTML. 
+[CLOCK IN JS](https://github.com/thiagolucio/JS-Projects/tree/main/Clock_JS): Relógio usando Vanilla JS, CSS3 e HTML. 
 
-[CALCULATOR IN JS](https://github.com/thiagolucio/JS-Projects/tree/main/Calculator_JS): A Simple Calculator using Vanilla JS, CSS3 and HTML.
+[CALCULATOR IN JS](https://github.com/thiagolucio/JS-Projects/tree/main/Calculator_JS):Calculadora usando  Vanilla JS, CSS3 e HTML.
