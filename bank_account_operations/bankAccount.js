@@ -1,4 +1,5 @@
 // Superclass
+// Fazer um método se comportar de forma diferente em classes filhas de um mesmo Pai é chamado de polimorfismo
 function Conta(agencia, conta, saldo) {
   this.agencia = agencia;
   this.conta = conta;
