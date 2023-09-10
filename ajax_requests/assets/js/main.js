@@ -19,8 +19,6 @@ const request = obj => {
     const xhr = new XMLHttpRequest();
     xhr.open(obj.method, obj.url, true); // métodos podem ser (get, post, put, delete) e url é a BASE_URL da aplicação
     xhr.send();
-    console.log('XHR >', xhr);
-    console.log('XHR:: SEND >', xhr.send());
 
     xhr.addEventListener('load', () => { 
       if(xhr.status >= 200 && xhr.status < 300) {
@@ -34,13 +32,11 @@ const request = obj => {
 
 document.addEventListener('click', e => {
   const el = e.target; // captura o link da página que foi clicado (target)
-  console.log('EL :> ', el);
   const tag = el.tagName.toLowerCase(); // tagName retorna o nome do elemento e depois converte pra minúsculo
 
   if (tag === 'a') {
     e.preventDefault();
     carregaPagina(el); // Promisse
-    console.log('carregaPagina(el) :> ', carregaPagina(el));
   }
 });
 
@@ -55,7 +51,6 @@ async function carregaPagina(el) {
   try {
     const response = await request(objConfig); // await espera a resposta da requisição (method, url)
     carregaResultado(response);
-    console.log('CARREGA RESULTADO : > ', carregaResultado(response));
   } catch(e) {
     console.log(e);
   }
@@ -63,7 +58,5 @@ async function carregaPagina(el) {
 
 function carregaResultado(response) { // pegando da linha 53 ali o response
   const resultado = document.querySelector('.resultado'); // trás conteúdo do link (página requisitada no evento de clique)
-  console.log('RESULTADO -> ', resultado);
   resultado.innerHTML = response;
-  console.log('Response da página', response);
 }
