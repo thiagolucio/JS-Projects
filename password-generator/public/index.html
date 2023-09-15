@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Modelo</title>
+</head>
+
+<body>
+
+  <section class="container">
+    <img src="./assets/img/coruja.gif" alt="Logo" class="logo">
+    <h1>Owl Password</h1>
+    <div class="senha-gerada">...</div>
+    <h4>Escolha a composição</h4>
+    <ul class="container-senhas">
+      <li>
+        <label class="form-control">
+          <input type="number" name="checkbox" value="8"  min="1" max="50" class="qtd-caracteres" />
+            Caracteres
+        </label>      
+      </li>
+      <li>
+        <label class="form-control">
+          <input type="checkbox" name="maiusculas" class="chk-maiusculas" checked />
+          Maiúsculas
+        </label>      
+      </li>
+      <li>
+        <label class="form-control">
+          <input type="checkbox" name="minusculas" class="chk-minusculas" checked />
+          Minúsculas
+        </label>   
+      </li>
+      <li>
+        <label class="form-control">
+          <input type="checkbox" name="numeros" class="chk-numeros" checked />
+          Números
+        </label> 
+      </li>
+      <li>
+        <label class="form-control">
+          <input type="checkbox" name="numeros" class="chk-simbolos" checked />
+          Símbolos  
+        </label>
+      </li>     
+    </ul>
+    <button type="button" class="gerar-senha">Gerar senha</button>
+  </section>
+
+  <script src="./assets/js/bundle.js"></script>
+</body>
+
+</html>
