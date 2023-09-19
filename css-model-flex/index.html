@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.container {
+  height: 100%;
+  /* height: 50%; vc pode tentar com 50% de altura que vai se adaptar */
+  width: 100%;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.container-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.container-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.item1, .item2, .item3 {
+  width: 20%;
+  height: 20%;
+  font-size: 2rem;
+}
+
+.item1 {
+  background-color: aliceblue;
+}
+.item2 {
+  background-color: blue;
+  color: white;
+}
+.item3 {
+  background-color: blueviolet;
+  color: white;
+}
+</style>
+<body>
+    <!-- <div class="container container-vertical"> -->
+    <div class="container container-horizontal">
+        <div class="item1 container-horizontal">Content</div>
+        <div class="item2 container-horizontal">Content</div>
+        <div class="item3 container-horizontal">Content</div>
+    </div>
+</body>
+
+</html>
