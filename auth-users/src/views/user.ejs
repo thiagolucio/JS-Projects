@@ -1,0 +1,46 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Usuário</h1>
+      <p class="text-center lead">Criar ou Editar os usuários</p>
+
+      <%- include('includes/messages') %>
+
+      <% if(user._id) { %>
+      <form action="/user/edit/<%= user._id %>" method="POST">
+      <% } else { %>
+      <form action="/user/register" method="POST">
+      <% } %>
+        <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+        <div class="form-group">
+          <label>Nome</label>
+          <input value="<%= user.name %>" type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group">
+          <label>Sobrenome</label>
+          <input value="<%= user.surname %>" type="text" class="form-control" name="surname">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input value="<%= user.email %>" type="email" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+          <label>Telefone</label>
+          <input value="<%= user.phone %>" type="tel" class="form-control" name="phone">
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </form>
+
+
+    </div>
+    
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>
