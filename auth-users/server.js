@@ -4,16 +4,12 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.CONNECTIONSTRING,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false // to use findOneAnd(Update, Delete) you need to declare this "false"
-  })
+mongoose.connect(process.env.CONNECTIONSTRING)
   .then(() => {
     app.emit('Ready');
   })
-  .catch(e => console.log('OPS. Some Error Bump!', e));
+  .catch(e => console.log('OPS. Some Error Bump -> ', e));
+
 
   const session = require('express-session'); // client cookie manager
   const MongoStore = require('connect-mongo'); // save session in BD
@@ -46,7 +42,11 @@ mongoose.connect(process.env.CONNECTIONSTRING,
     app.set('view engine', 'ejs'); // use EJS
     
     app.use(csrf()); // create a token for security
-
+    // middlewares
+    app.use(middlewareGlobal);
+    app.use(checkCsrfError);
+    app.use(csrfMiddleware);
+    app.use(routes);
 
 // "Ready" condition ok so execute
 app.on('Ready', () => {

@@ -63,7 +63,7 @@ exports.edit = async function(req, res) {
     const user = await User.delete(req.params.id); // go run all database users based on the id and delete this user register
     if(!user) return res.render('404'); // if the user cannot be found res.render 404
   
-    req.flash('success', 'User removed as well!'); //if all good return flash message
+    req.flash('success', 'User removed Done!'); //if all good return flash message
     req.session.save(() => res.redirect('back')); // save session before redirect
     return;
   };

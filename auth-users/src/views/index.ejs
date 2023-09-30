@@ -2,7 +2,38 @@
 <%- include('includes/nav') %>
 
 <div class="container">
-    <h1> CONTEUDO DO INDEX </h1>
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">USERS</h1>
+      <p class="text-center lead">Lista de usuários</p>
+
+      <%- include('includes/messages') %>
+
+      <% if(users.length > 0) { %>
+      <div class="responsive-table">
+        <table class="table my-3">
+          <% users.forEach(contato => { %>
+          <tr>
+            <td><%= user.nome %></td>
+            <td><%= user.sobrenome %></td>
+            <td><%= user.telefone %></td>
+            <td><%= user.email %></td>
+            <td><a href="/user/index/<%= user._id %>">Editar</a></td>
+            <td><a class="text-danger" href="/user/delete/<%= user._id %>">Excluir</a></td>
+          </tr>
+          <% }); %>
+        </table>
+      </div>
+      <% } else { %>
+        <p class="text-center lead">Não existem contatos na sua agenda.</p>
+      <% } %>
+
+    </div>
+    
+    <div class="col-lg-2"></div>
+  </div>
 </div>
 
 <%- include('includes/footer') %>
