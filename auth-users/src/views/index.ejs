@@ -1,27 +1,25 @@
 <%- include('includes/head') %>
 <%- include('includes/nav') %>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-2"></div>
-
-    <div class="col-lg-8 my-3">
-      <h1 class="text-center">Agenda</h1>
-      <p class="text-center lead">Seus contatos estão abaixo</p>
-
-      <%- include('includes/messages') %>
-
+<div class="container-fluid m-0 p-0">
+	<div class="row">
+		<div class="col-md-2">
+		</div>
+    
+		<div class="col-md-8 my-3 bg-dark p-4">
+     <h1 class="text-center text-info">Agenda</h1>
+      <p class="text-center lead text-light">Seus contatos estão abaixo</p>
+       <%- include('includes/messages') %>
       <% if(contatos.length > 0) { %>
       <div class="responsive-table">
-        <table class="table my-3">
+        <table class="table my-3 text-light">
           <% contatos.forEach(contato => { %>
           <tr>
             <td><%= contato.nome %></td>
             <td><%= contato.sobrenome %></td>
             <td><%= contato.telefone %></td>
             <td><%= contato.email %></td>
-            <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
-            <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
+            <td class="m-0 p-0 py-3"><a title="Editar" class="text-info" href="/contato/index/<%= contato._id %>"><i class="fa-solid fa-pen-to-square fa-lg"></i></a></td>
+            <td class="m-0 p-0 py-3"><a title="Excluír" class="text-danger" href="/contato/delete/<%= contato._id %>"><i class="fa-solid fa-trash fa-lg"></i></a></td>
           </tr>
           <% }); %>
         </table>
@@ -29,11 +27,13 @@
       <% } else { %>
         <p class="text-center lead">Não existem contatos na sua agenda.</p>
       <% } %>
-
-    </div>
-    
-    <div class="col-lg-2"></div>
-  </div>
+		</div>
+		<div class="col-md-2">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 bg-dark">
+    <%- include('includes/footer') %>
+		</div>
+	</div>
 </div>
-
-<%- include('includes/footer') %>

@@ -1,22 +1,16 @@
 <%- include('includes/head') %>
 <%- include('includes/nav') %>
-
-<div class="container">
+<div class="container bg-dark my-3 p-3 text-light rounded-lg">
   <div class="row">
     <div class="col-lg-2"></div>
-
-    <div class="col-lg-8 my-3">
-      <h1 class="text-center">Criar conta ou Entrar</h1>
+    <div class="col-lg-8">
+      <h1 class="text-center text-info">Criar conta ou Entrar</h1>
       <p class="text-center lead">Faça login ou crie sua conta abaixo</p>
-
       <%- include('includes/messages'); %>
-
       <div class="row">
-
-        <div class="col-lg my-5">
-          <h4>Faça seu cadastro</h4>
+        <div class="col-lg my-5 p-3 w-50 mr-3">
+          <h4 class="text-warning">Faça seu cadastro</h4>
           <p>Se você ainda não tem conta, preencha o formulário abaixo:</p>
-
           <form class="form-cadastro" action="/login/register" method="POST">
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="form-group">
@@ -27,17 +21,18 @@
               <label>Sua senha</label>
               <input type="password" class="form-control" name="password">
             </div>
-            <button type="submit" class="btn btn-primary">Criar minha conta</button>
+            <button type="submit" class="btn btn-lg btn-warning btn-block"><i class="fa-solid fa-user-tag"></i> Registrar-se</button>
           </form>
-
         </div>
-
-        <div class="col-lg my-5">
-          <h4>Faça seu login</h4>
-
-          <p>Se você já tem uma conta, faça login abaixo:</p>
-
-          <form class="form-login" action="/login/login" method="POST">
+        <div class="col-lg my-5 border-left border-secondary p-3">
+          <div class="row">
+            <div class="col-12 mb-4 ml-3">
+              <h4 class="text-info">Faça seu login</h4>
+              <p class="mb-3">Se você já tem uma conta, faça login abaixo:</p>
+            </div>
+          </div>
+ 
+          <form class="form-login ml-3" action="/login/login" method="POST">
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="form-group">
               <label>Seu e-mail</label>
@@ -47,16 +42,11 @@
               <label>Sua senha</label>
               <input type="password" class="form-control" name="password">
             </div>
-            <button type="submit" class="btn btn-primary">Entrar</button>
+            <button type="submit" class="btn btn-lg btn-info btn-block"><i class="fa-solid fa-arrow-right-to-bracket"></i> Entrar</button>
           </form>
-
-          
         </div>
-
       </div>
-
     </div>
-
     <div class="col-lg-2"></div>
   </div>
 </div>
