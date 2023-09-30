@@ -6,22 +6,22 @@
     <div class="col-lg-2"></div>
 
     <div class="col-lg-8 my-3">
-      <h1 class="text-center">USERS</h1>
-      <p class="text-center lead">Lista de usuários</p>
+      <h1 class="text-center">Agenda</h1>
+      <p class="text-center lead">Seus contatos estão abaixo</p>
 
       <%- include('includes/messages') %>
 
-      <% if(users.length > 0) { %>
+      <% if(contatos.length > 0) { %>
       <div class="responsive-table">
         <table class="table my-3">
-          <% users.forEach(contato => { %>
+          <% contatos.forEach(contato => { %>
           <tr>
-            <td><%= user.nome %></td>
-            <td><%= user.sobrenome %></td>
-            <td><%= user.telefone %></td>
-            <td><%= user.email %></td>
-            <td><a href="/user/index/<%= user._id %>">Editar</a></td>
-            <td><a class="text-danger" href="/user/delete/<%= user._id %>">Excluir</a></td>
+            <td><%= contato.nome %></td>
+            <td><%= contato.sobrenome %></td>
+            <td><%= contato.telefone %></td>
+            <td><%= contato.email %></td>
+            <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
+            <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
           </tr>
           <% }); %>
         </table>
