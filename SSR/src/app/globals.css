@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3%
+}
+
+.fieldArray {
+    padding: 2%;
+    margin: 12%;
+    font-weight: 700;
+    border: 2px solid orchid;
+    border-radius: 3%;
+}
+
+.content-github {
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto;
+}
+.button {
+    width: 300px;
+    padding: 8px 30px;
+    background: #050505;
+    color: crimson;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.dialog {
+    width: 400px;
+    height: 400px;
+    background: #050505;
+    color: orchid;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
