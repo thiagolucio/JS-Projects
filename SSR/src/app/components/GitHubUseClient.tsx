@@ -6,8 +6,9 @@ export interface GithubUseClientProps {
 
 async function GithubUseCient(props: GithubUseClientProps) {
     const response = await fetch(`https://api.github.com/users/${props.username}`);
+    console.log('RESPONSE ->', response, typeof(response));
     const user = await response.json();
-
+    console.log('USER ->', user, typeof(user));
 
     return (
         <>
